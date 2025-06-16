@@ -1,0 +1,128 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<student id = "024617702">
+    <ime>Lovro</ime>
+    <prezime>Matijakovic</prezime>
+    <fakultet>
+        <imeFakulteta>TVZ</imeFakulteta>
+        <smjer>Informaticki dizajn</smjer>
+        <godina>2.</godina>
+        <kolegiji>
+            <kolegij>
+                Dizajn
+            </kolegij>
+            <kolegij>
+                Programiranje web aplikacija
+            </kolegij>
+            <kolegij>
+                ITD
+            </kolegij>
+        </kolegiji>
+    </fakultet>
+</student>
+
+<nekretnina>
+  <vrsta>kuća</vrsta>
+  <adresa>
+    <ulica>Primorska ulica 45</ulica>
+    <grad>Split</grad>
+    <drzava>Hrvatska</drzava>
+    <postanski_broj>21000</postanski_broj>
+  </adresa>
+  <povrsina>
+    <ukupna>150</ukupna>
+    <terasa>25</terasa>
+    <okucnica>50</okucnica>
+  </povrsina>
+  <broj_soba>4</broj_soba>
+  <broj_kupatila>3</broj_kupatila>
+  <cijena valuta="HRK">3500000</cijena>
+  <godinaizgradnje>2010</godinaizgradnje>
+  <opis>Predivna obiteljska kuća s pogledom na more, moderno uređena i prostrana.</opis>
+  <slike>
+    <slika url="https://primjer.com/slika1.jpg" />
+    <slika url="https://primjer.com/slika2.jpg" />
+    <slika url="https://primjer.com/slika3.jpg" />
+  </slike>
+</nekretnina>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Student>
+  <JMBAG>0036452137</JMBAG>
+  <Ime>Ana</Ime>
+  <Prezime>Anić</Prezime>
+  <DatumRodjenja>2000-05-15</DatumRodjenja>
+  <Spol>Ž</Spol>
+  <Studij>
+    <Naziv>Informatika</Naziv>
+    <Razina>Preddiplomski</Razina>
+  </Studij>
+  <Upisi>
+    <Upis>
+      <AkademskaGodina>2020/2021</AkademskaGodina>
+      <Semestar>1</Semestar>
+      <Predmeti>
+        <Predmet>
+          <Sifra>INF101</Sifra>
+          <Naziv>Uvod u informatiku</Naziv>
+          <ECTS>6</ECTS>
+        </Predmet>
+        <Predmet>
+          <Sifra>MAT101</Sifra>
+          <Naziv>Matematika 1</Naziv>
+          <ECTS>7</ECTS>
+        </Predmet>
+      </Predmeti>
+    </Upis>
+    <Upis>
+      <AkademskaGodina>2021/2022</AkademskaGodina>
+      <Semestar>2</Semestar>
+      <Predmeti>
+        <Predmet>
+          <Sifra>INF102</Sifra>
+          <Naziv>Programiranje</Naziv>
+          <ECTS>6</ECTS>
+        </Predmet>
+        <Predmet>
+          <Sifra>MAT102</Sifra>
+          <Naziv>Matematika 2</Naziv>
+          <ECTS>7</ECTS>
+        </Predmet>
+      </Predmeti>
+    </Upis>
+  </Upisi>
+</Student>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="property">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="type" type="xs:string"/>
+        <xs:element name="description" type="xs:string"/>
+        <xs:element name="address">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="street" type="xs:string"/>
+              <xs:element name="city" type="xs:string"/>
+              <xs:element name="zip" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="price" type="xs:decimal"/>
+        <xs:element name="year_built" type="xs:gYear"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+
+
+1. //student/ime
+2. //student[1]/predmeti/predmet/naziv
+3. string-length(//student[2]/JMBAG)
+4. count(//student)
+5. //predmet[@skraceno]/sifra
+6. count(//student[ime='Petar'])
+7. concat(//student[last()]/ime, ', ', //student[last()]/prezime, ', ', //student[last()]/JMBAG)

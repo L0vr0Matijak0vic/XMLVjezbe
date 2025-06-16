@@ -1,0 +1,18 @@
+1. //Student/Ime
+2. //Student/Predmet/Naslov
+3. //Student[3]/Predmet/Vjezbe/Vjezba[4]
+4. //Student[2]/Predmet/Vjezbe/Vjezba[text()="NE"]
+5. //Kolokvij
+6. //Student[last()]/Prezime
+7. contains(//Student[3]/Ime, "a")
+8. concat(//Student[2]/Ime, " ", //Student[4]/Prezime)
+9. 2025 - //Student[@RedniBroj="3"]/GodinaRodenja
+10. boolean(//Kolokvij[text()="5"])
+11. string-length(//Student[4]/Prezime) + string-length(//Student[2]/Ime)
+12. count(//Student[@RedniBroj="2"]/Predmet/Vjezbe/Vjezba[text()="NE"])
+13. boolean(//Kolokviji/Kolokvij[2][text()="0"])
+14. //Student[Grupa="A"]/Ime
+15. //Student[not(Predmet/Vjezbe/Vjezba[text()="NE"])]
+16. //Student[Predmet/Vjezbe/Vjezba[text()="NE"]]
+17. //Kolokvij[number(text()) < 3]
+18. //Student[contains(Prezime, "ć")]/Ime

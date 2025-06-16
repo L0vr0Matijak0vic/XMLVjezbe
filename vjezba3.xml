@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="CV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Ime" type="xs:string"/>
+        <xs:element name="Prezime" type="xs:string"/>
+        <xs:element name="BrojMobitela" type="xs:string"/>
+        <xs:element name="DatumRodenja" type="xs:date"/>
+        
+        <xs:element name="PopisObrazovanja">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Obrazovanje" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Institucija" type="xs:string"/>
+                    <xs:element name="GodinaPocetka" type="xs:gYear"/>
+                    <xs:element name="GodinaZavrsetka" type="xs:gYear" minOccurs="0"/>
+                  </xs:sequence>
+                  <xs:attribute name="razina" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="RadnaIskustva">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RadnoIskustvo" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="DatumPocetka" type="xs:date"/>
+                    <xs:element name="DatumZavrsetka" type="xs:date"/>
+                    <xs:element name="NazivTvrtke" type="xs:string"/>
+                    <xs:element name="VrstaTvrtke" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="oib" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Nekretnine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Nekretnina" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Naslov" type="xs:string" minOccurs="0"/>
+              <xs:element name="Tip" type="xs:string"/>
+              <xs:element name="Lokacija">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Grad" type="xs:string"/>
+                    <xs:element name="Općina" type="xs:string"/>
+                    <xs:element name="Adresa" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Cijena" type="xs:decimal" minOccurs="0"/>
+              <xs:element name="Površina" type="xs:decimal" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
