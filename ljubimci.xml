@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ljubimci>
+    <ljubimac>
+        <ime>Bella</ime>
+        <vrsta>Pas</vrsta>
+        <godine>5</godine>
+    </ljubimac>
+    <ljubimac>
+        <ime>Luna</ime>
+        <vrsta>Mačka</vrsta>
+        <godine>3</godine>
+    </ljubimac>
+    <ljubimac>
+        <ime>Kiki</ime>
+        <vrsta>Papiga</vrsta>
+        <godine>2</godine>
+    </ljubimac>
+</ljubimci>
