@@ -1,0 +1,38 @@
+1. <?xml version="1.0" encoding="UTF-8"?>
+UTF-8 znači da je dokument kodiran u UTF-8 kako bi dokument podržavao sve Unicode znakove
+
+2.<br />
+<img src="slika.jpg" />
+<input type="text" />
+
+<input type="text" value="Unesi ime" />
+
+3.<?xml version="1.0" encoding="UTF-8"?>
+<nekretnine autor="Lovro Matijaković">
+  <nekretnina datum="2025-06-19">
+    <tip>Stan</tip>
+    <lokacija>Zagreb</lokacija>
+    <kvadratura>75</kvadratura>
+    <cijena>180000</cijena>
+    <broj_soba>3</broj_soba>
+    <namjesten>da</namjesten>
+    <kat>2</kat>
+  </nekretnina>
+  <nekretnina datum="2025-02-19">
+    <tip>Kuća</tip>
+    <lokacija>Split</lokacija>
+    <kvadratura>150</kvadratura>
+    <cijena>320000</cijena>
+    <broj_soba>5</broj_soba>
+    <namjesten>ne</namjesten>
+    <kat>1</kat>
+  </nekretnina>
+</nekretnine>
+
+4.table#main>tr*2>td*2>a.link[href=""]
+
+5.RSS je napravljen na temelju XMLa, koristi XML oznake. RSS se koristi za brza ažuriranja nekog sadržaja poput članaka, vijesti, blogova.
+
+6.<manjeOd>&lt;</manjeOd>
+
+7.CDATA se koristi kada unutar XMLa  želimo umetnuti tekst koji sadrži posebne znakove poput <, &... koje bi inače XML  tumačio kao oznake. Ovako su samo tekst.
